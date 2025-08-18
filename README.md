@@ -106,6 +106,10 @@ The random_state changes the order of the training points. That means the Percep
 This can change how many mistakes happen in each round, because the updates happen differently.
 But if the data can be split with a straight line, the final guesses usually stay the same.
 
+ C. Experiment with random_state (e.g., 42, 100). How does it affect the errors and prediction?
+ 
+ Changing the random_state can affect how the Perceptron learns and makes guesses. When we shuffle the training data in a different order, the model updates its rules in that new order. This can cause the number of mistakes to go up or down a little during each round of learning. Some random orders might help the model learn faster, while others might slow it down at first. For data that can be split with a straight line, like Setosa vs Versicolor, the final guesses usually stay the same because the model still finds a good line to separate the groups. But for data that cannot be split neatly, changing the random_state might cause the model to guess some points differently, which can slightly change the final results
+
 THE THINGS I LEARNT :
 In Exercise 1, I learned that the Perceptron is a basic computer model that can split data into two groups. It does this by changing its rules whenever it makes a wrong guess. I liked the robot librarian example, where the model learns step by step how to put books in the right group—either fiction or non-fiction. I also learned that the Perceptron works best when the data can be divided with a straight line. If you add new points, the model might change its guesses a little because it tries to fit everything better. Lastly, I learned that the order of training, meaning which data comes first, can change how many mistakes the model makes while learning. I got to try it out myself using Python and a tool called sklearn, which helped me train and test the model in a real way.
 
